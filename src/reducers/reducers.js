@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import { showPopulation } from './population';
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  population: showPopulation
 });
 
 export default rootReducer;

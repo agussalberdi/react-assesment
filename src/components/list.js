@@ -15,12 +15,11 @@ class List extends Component {
       return data.map((gnome) => {
         return (
           <tr key={gnome.id}>
-            <td>{gnome.name}</td>
+            <td className="name"><img src={gnome.thumbnail}></img>{gnome.name}</td>
             <td>{gnome.age}</td>
             <td>{gnome.weight}</td>
             <td>{gnome.height}</td>
             <td>{gnome.hair_color}</td>
-            <td><img src={gnome.thumbnail}></img></td>
           </tr>
         )
       })
@@ -30,15 +29,14 @@ class List extends Component {
   render() {
     return (
       <div>
-        <Table responsive hover variant="dark">
+        <Table responsive hover>
             <thead>
               <tr>
-                <th>Name: </th>
-                <th>Age: </th>
-                <th>Weight: </th>
-                <th>Height: </th>
-                <th>Hair: </th>
-                <th>Avatar: </th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Weight</th>
+                <th>Height</th>
+                <th>Hair</th>
               </tr>
             </thead>
             <tbody>

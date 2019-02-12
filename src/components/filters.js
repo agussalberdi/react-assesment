@@ -38,6 +38,7 @@ export class Filters extends Component{
   render() {
     return(
       <div>
+        <p>Are you looking for someone in the town?</p>
         <form onSubmit={this.onSubmit} id="filterForm">
           <input type="text" name="name" onChange={this.onChange} value={this.state.name} placeholder="Name"></input>
           <input type="number" name="age" onChange={this.onChange} value={this.state.age} placeholder="Age" min="0"></input>

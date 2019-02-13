@@ -2,14 +2,7 @@ React and Redux Assesment
 This is a web app that retrieve data for an api of a Gnome town called Brastlewark. The UI shows all this data to the users and also include some filters to quickly browse an specific individual and see all the details.
 
 Running the tests
-Explain how to run the automated tests for this system
-
-Break down into end to end tests
-Explain what these tests test and why
-
-Give an example
-And coding style tests
-Explain what these tests test and why
+npm run test to test the app with Jest
 
 Built With
 React - The JavaScript framework used

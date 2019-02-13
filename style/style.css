@@ -15,6 +15,10 @@
   margin: 20px auto;
 }
 
+.table-responsive{
+  overflow-x: visible !important;
+}
+
 .table{
   margin-top: 1rem !important;
   border-radius: 5px !important; 
@@ -96,7 +100,28 @@
   border: 1px solid#007bff;
 }
 
+@media screen and (max-width: 1024px){
+  .table{
+    font-size: 13px;
+  }
+}
+
 @media screen and (max-width: 700px){
+  .table-responsive{
+    overflow-x: scroll !important;
+  }
+  .table{
+    font-size: 10px;
+  }
+  .table td img{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+  }
+  .table td.name{
+    text-align: center;
+  }
   #filterForm input, .button{
     width: calc(50% - 10px);
   }

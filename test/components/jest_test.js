@@ -1,6 +1,7 @@
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 import * as actions from '../../src/actions/actions'
+import reducer from '../../src/reducers/population'
 import mockAxios from 'jest-mock-axios';
 import expect from 'expect' // You can use any testing library
 
@@ -31,3 +32,45 @@ describe('async actions', () => {
   })
 })
 
+describe('population reducer', () => {
+  it('should return the initial state', () => {
+    expect(reducer(undefined, {})).toEqual([
+      {
+        filters: {},
+        list: []
+      }
+    ])
+  })
+
+  it('should handle SHOW_POPULATION', () => {
+    expect(
+      reducer([], {
+        type: types.SHOW_POPULATION
+      })
+    ).toEqual([
+      {
+        filters: {},
+        list: []
+      }
+    ])
+
+    expect(
+      reducer(
+        [
+          {
+            filters: {},
+            list: []
+          }
+        ],
+        {
+          type: types.SHOW_POPULATION
+        }
+      )
+    ).toEqual([
+      {
+        filters: {},
+        list: []
+      }
+    ])
+  })
+})

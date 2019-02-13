@@ -10,8 +10,8 @@
     "test:watch": "npm run test -- --watch",
     "build": "webpack -p --define process.env.NODE_ENV='\"production\"' --progress --colors"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Agustin Alberdi",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.2.1",
     "babel-jest": "^24.1.0",

@@ -14,6 +14,7 @@ export class Filters extends Component{
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this); 
+    this.resetInputs = this.resetInputs.bind(this);
   }  
 
   onChange(e) {
@@ -28,12 +29,23 @@ export class Filters extends Component{
       age: this.state.age,
       weight: this.state.weight,
       height: this.state.height,
-      hair: this.state.hair
+      hair_color: this.state.hair
     };
 
     this.props.filterPopulation(filter);
   }
 
+  resetInputs(e) {
+    e.preventDefault();
+
+    this.setState({
+        name : '',
+        age: '',
+        weight: '',
+        height: '',
+        hair_color: ''
+    });
+  }
 
   render() {
     return(
@@ -46,6 +58,7 @@ export class Filters extends Component{
           <input type="number" name="height" onChange={this.onChange} value={this.state.height} placeholder="Height" min="0"></input>
           <input type="text" name="hair" onChange={this.onChange} value={this.state.hair} placeholder="Hair Color"></input>
           <button type="submit" className="button">Search</button>
+          <button onClick={this.resetInputs} className="button">Reset</button>
         </form>
       </div>
     )
